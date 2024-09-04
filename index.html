@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Hello! I'm Tyxiel</title>
+  <meta name="description" content="A fictitious portfolio for a freeCodeCamp project." />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script>document.addEventListener('DOMContentLoaded', function () {
+    const icon = document.getElementById('dropdown-icon');
+    const menu = document.getElementById('dropdown-menu');
+    const container = document.querySelector('.dropdown-container');
+  
+    icon.addEventListener('click', function (event) {
+      event.stopPropagation(); 
+      if (container.classList.contains('open')) {
+        container.classList.remove('open');
+      } else {
+        container.classList.add('open');
+      }
+    });
+  
+    document.addEventListener('click', function (event) {
+      if (!container.contains(event.target)) {
+        container.classList.remove('open');
+      }
+    });
+  });
+  </script>
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <div class="dropdown-container">
+        <i class="bx bx-chevron-right dropdown-icon" id="dropdown-icon"></i>
+        <ul class="dropdown" id="dropdown-menu">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <i class="bx bx-home-alt-2"></i>
+              <span>Welcome!</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bx bx-briefcase"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bx bx-envelope"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <script src="script.js"></script>
+</body>
+</html>
