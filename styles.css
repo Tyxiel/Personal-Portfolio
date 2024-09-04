@@ -1,4 +1,3 @@
-/* Define the color variables */
 :root {
   --color-lightest: #f8f9fa;
   --color-light: #e9ecef;
@@ -31,9 +30,9 @@ body {
   top: 10vh;
   width: auto;
   border-radius: 8px;
-  background-color: var(--color-light);
+  background-color: var(--color-dark);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--color-lighter);
+  border: 1px solid (--color-darker);
 }
 
 .dropdown-container {
@@ -44,8 +43,8 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--color-light);
-  border: 1px solid var(--color-lighter);
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-darker);
   display: none;
   opacity: 0;
   visibility: hidden;
@@ -60,7 +59,7 @@ body {
   transition: transform 0.3s ease;
   padding: 5px;
   font-size: 30px;
-  color: var(--color-darkest);
+  color: var(--color-light-dark);
 }
 
 .dropdown-container.open .dropdown {
@@ -87,7 +86,7 @@ body {
   display: flex;
   align-items: center;
   padding: 7.5px 5px;
-  border-bottom: 0.5px solid var(--color-lighter);
+  border-bottom: 0.5px solid var(--color-darkest);
 }
 
 .dropdown .nav-item:last-child {
@@ -98,7 +97,7 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--color-dark);
+  color: var(--color-light-dark);
   padding: 2.5px 5px;
 }
 
@@ -110,15 +109,32 @@ body {
 .dropdown .nav-link span {
   font-size: 16px;
   font-weight: 400;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .dropdown .nav-link:hover {
-  background-color: var(--color-light);
+  background-color: var(--color-darkest);
   border-radius: 4px;
 }
 
 #welcome-screen {
-  color: var(--color-darkest);
+  color: var(--color-lightest);
+  background-color: var(--color-darkest);
   text-align: center;
-  padding: 50px;
+  padding: 0 50px 50px 50px;
+  height: 100vh;
+  width: 100vw;
+  place-content: center;
+}
+
+#welcome-screen h1 {
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+#welcome-screen h2 {
+  font-weight: normal;
+  font-size: 20px;
+  color: var(--color-light-medium);
 }
