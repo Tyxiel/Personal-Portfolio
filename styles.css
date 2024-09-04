@@ -1,4 +1,19 @@
-*, ::before, ::after {
+/* Define the color variables */
+:root {
+  --color-lightest: #f8f9fa;
+  --color-light: #e9ecef;
+  --color-lighter: #dee2e6;
+  --color-light-medium: #ced4da;
+  --color-light-dark: #adb5bd;
+  --color-medium-dark: #6c757d;
+  --color-dark: #495057;
+  --color-darker: #343a40;
+  --color-darkest: #212529;
+}
+
+*,
+::before,
+::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -6,8 +21,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #f4f4f4;
+  color: var(--color-dark);
+  background-color: var(--color-lightest);
 }
 
 #navbar {
@@ -16,9 +31,9 @@ body {
   top: 10vh;
   width: auto;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--color-light);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-lighter);
 }
 
 .dropdown-container {
@@ -29,22 +44,23 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-lighter);
   display: none;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 1000;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .dropdown-icon {
   cursor: pointer;
   transition: transform 0.3s ease;
-  padding: 10px;
+  padding: 5px;
   font-size: 30px;
+  color: var(--color-darkest);
 }
 
 .dropdown-container.open .dropdown {
@@ -70,8 +86,8 @@ body {
 .dropdown .nav-item {
   display: flex;
   align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding: 7.5px 5px;
+  border-bottom: 0.5px solid var(--color-lighter);
 }
 
 .dropdown .nav-item:last-child {
@@ -82,7 +98,8 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #333;
+  color: var(--color-dark);
+  padding: 2.5px 5px;
 }
 
 .dropdown .nav-link i {
@@ -96,6 +113,12 @@ body {
 }
 
 .dropdown .nav-link:hover {
-  background-color: #f0f0f0;
+  background-color: var(--color-light);
   border-radius: 4px;
+}
+
+#welcome-screen {
+  color: var(--color-darkest);
+  text-align: center;
+  padding: 50px;
 }
