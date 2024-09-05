@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>My Portfolio</title>
     <link rel="preload" href="style.css" as="style" />
-    
+
     <link
       rel="apple-touch-icon"
       sizes="57x57"
@@ -110,17 +110,18 @@
           }
         });
 
-        const i = link.querySelector("i");
+        const a = document.querySelector("aside a");
+        const i = document.querySelector("aside a i");
 
-        link.addEventListener("mouseenter", () => {
-          if (i.classList.contains("bxs-folder")){
+        a.addEventListener("mouseenter", () => {
+          if (i.classList.contains("bxs-folder")) {
             i.classList.replace("bxs-folder", "bxs-folder-open");
           }
         });
 
-        link.addEventListener("mouseleave", () => {
-          if (i.classList.contains("bxs-folder-open")){
-            i.classList.replace("bxs-folder-open", "bxs-folder")
+        a.addEventListener("mouseleave", () => {
+          if (i.classList.contains("bxs-folder-open")) {
+            i.classList.replace("bxs-folder-open", "bxs-folder");
           }
         });
       });
@@ -133,7 +134,7 @@
           <i class="bx bx-chevron-right dropdown-icon" id="dropdown-icon"></i>
           <ul class="dropdown" id="dropdown-menu">
             <li class="nav-item">
-              <a class="nav-link active" href="#welcome-screen">
+              <a class="nav-link active" href="#welcome-section">
                 <i class="bx bx-home-alt-2"></i>
                 <span>Welcome!</span>
               </a>
@@ -154,7 +155,7 @@
         </div>
       </nav>
       <main>
-        <section id="welcome-screen">
+        <section id="welcome-section">
           <h1>
             Howdy! I'm
             <a
@@ -174,53 +175,77 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="https://i.ibb.co/Qn5cWvc/image.png" alt="A weather app with the most important info"/>
-              <p aria-hidden="true">Simple Weather App</p>
+              <img
+                src="https://i.ibb.co/Qn5cWvc/image.png"
+                alt="A weather app with the most important info"
+              />
+              <p class="project-tile" aria-hidden="true">Simple Weather App</p>
             </a>
             <a
               href="https://gabrielbehling.github.io/Weather-App/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="https://i.ibb.co/k93dWR9/image.png" alt="A weather app with almost everything"/>
-              <p aria-hidden="true">Advanced Weather App</p>
+              <img
+                src="https://i.ibb.co/k93dWR9/image.png"
+                alt="A weather app with almost everything"
+              />
+              <p class="project-tile" aria-hidden="true">Advanced Weather App</p>
             </a>
             <a
               href="https://tyxiel.github.io/appViaCep2/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="https://i.ibb.co/s3sYKFz/image.png" alt="A brazilian CEP search app"/>
-              <p aria-hidden="true">Brazilian CEP Search</p>
+              <img
+                src="https://i.ibb.co/s3sYKFz/image.png"
+                alt="A brazilian CEP search app"
+              />
+              <p class="project-tile" aria-hidden="true">Brazilian CEP Search</p>
             </a>
             <a
               href="https://tyxiel.github.io/CNPJSearchApp/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="https://i.ibb.co/BZKbf2F/image.png" alt="A brazilian CNPJ search app"/>
-              <p aria-hidden="true">Brazilian CNPJ Search</p>
+              <img
+                src="https://i.ibb.co/BZKbf2F/image.png"
+                alt="A brazilian CNPJ search app"
+              />
+              <p class="project-tile" aria-hidden="true">Brazilian CNPJ Search</p>
             </a>
             <a
               href="https://tyxiel.github.io/Product-Landing-Page/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="https://i.ibb.co/2hS2brm/image.png" alt="A simple product landing page"/>
-              <p aria-hidden="true">Product Landing Page</p>
+              <img
+                src="https://i.ibb.co/2hS2brm/image.png"
+                alt="A simple product landing page"
+              />
+              <p class="project-tile" aria-hidden="true">Product Landing Page</p>
             </a>
             <a
               href="https://tyxiel.github.io/Technical-Doc/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="https://i.ibb.co/2YJPGNS/image.png" alt="A simple golang technical document"/>
-              <p aria-hidden="true">Simple Golang Technical Doc</p>
+              <img
+                src="https://i.ibb.co/2YJPGNS/image.png"
+                alt="A simple golang technical document"
+              />
+              <p class="project-tile" aria-hidden="true">Simple Golang Technical Doc</p>
             </a>
           </main>
           <aside class="projects-aside">
-            <i class="bx bxs-folder"></i>
-            <h1>All repositories</h1>
+            <a
+              href="https://github.com/tyxiel"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bx bxs-folder"></i>
+              <h1>All repositories</h1>
+            </a>
           </aside>
         </section>
       </main>
