@@ -5,6 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>My Portfolio</title>
+    <link rel="preload" href="style.css" as="style" />
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
     <meta
       name="description"
       content="A portfolio for a freeCodeCamp project."
@@ -31,6 +107,20 @@
         document.addEventListener("click", function (event) {
           if (!container.contains(event.target)) {
             container.classList.remove("open");
+          }
+        });
+
+        const i = link.querySelector("i");
+
+        link.addEventListener("mouseenter", () => {
+          if (i.classList.contains("bxs-folder")){
+            i.classList.replace("bxs-folder", "bxs-folder-open");
+          }
+        });
+
+        link.addEventListener("mouseleave", () => {
+          if (i.classList.contains("bxs-folder-open")){
+            i.classList.replace("bxs-folder-open", "bxs-folder")
           }
         });
       });
@@ -68,7 +158,7 @@
           <h1>
             Howdy! I'm
             <a
-              href="https://tyxiel.github.io/Simple-Weather-App/"
+              href="https://github.com/tyxiel"
               target="_blank"
               rel="noopener noreferrer"
               >Tyxiel.</a
@@ -84,58 +174,56 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="" alt="" srcset="" />
-              <p>Simple Weather App</p>
+              <img src="https://i.ibb.co/Qn5cWvc/image.png" alt="A weather app with the most important info"/>
+              <p aria-hidden="true">Simple Weather App</p>
             </a>
             <a
               href="https://gabrielbehling.github.io/Weather-App/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="" alt="" srcset="" />
-              <p>Advanced Weather App</p>
+              <img src="https://i.ibb.co/k93dWR9/image.png" alt="A weather app with almost everything"/>
+              <p aria-hidden="true">Advanced Weather App</p>
             </a>
             <a
               href="https://tyxiel.github.io/appViaCep2/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="" alt="" srcset="" />
-              <p>Brazilian CEP Search</p>
+              <img src="https://i.ibb.co/s3sYKFz/image.png" alt="A brazilian CEP search app"/>
+              <p aria-hidden="true">Brazilian CEP Search</p>
             </a>
             <a
               href="https://tyxiel.github.io/CNPJSearchApp/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="" alt="" srcset="" />
-              <p>Brazilian CNPJ Search</p>
+              <img src="https://i.ibb.co/BZKbf2F/image.png" alt="A brazilian CNPJ search app"/>
+              <p aria-hidden="true">Brazilian CNPJ Search</p>
             </a>
             <a
               href="https://tyxiel.github.io/Product-Landing-Page/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="" alt="" srcset="" />
-              <p>Product Landing Page</p>
+              <img src="https://i.ibb.co/2hS2brm/image.png" alt="A simple product landing page"/>
+              <p aria-hidden="true">Product Landing Page</p>
             </a>
             <a
               href="https://tyxiel.github.io/Technical-Doc/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="" alt="" srcset="" />
-              <p>Simple Golang Technical Doc</p>
+              <img src="https://i.ibb.co/2YJPGNS/image.png" alt="A simple golang technical document"/>
+              <p aria-hidden="true">Simple Golang Technical Doc</p>
             </a>
           </main>
           <aside class="projects-aside">
             <i class="bx bxs-folder"></i>
             <h1>All repositories</h1>
-            <!-- on hover, change to <i class='bx bxs-folder-open' ></i> -->
           </aside>
         </section>
       </main>
     </header>
-    <script src="script.js"></script>
   </body>
 </html>
