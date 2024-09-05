@@ -145,7 +145,7 @@ body {
   border-radius: 4px;
 }
 
-#welcome-screen {
+#welcome-section {
   color: var(--color-lightest);
   background: linear-gradient(
     135deg,
@@ -159,22 +159,22 @@ body {
   place-content: center;
 }
 
-#welcome-screen h1 {
+#welcome-section h1 {
   font-weight: bolder;
   font-size: 60px;
 }
 
-#welcome-screen h1 a {
+#welcome-section h1 a {
   color: var(--color-lightest);
   transition: color 0.3s ease;
 }
 
-#welcome-screen h1 a:hover {
+#welcome-section h1 a:hover {
   color: var(--color-light-dark);
   transform: translateY(-2px);
 }
 
-#welcome-screen h2 {
+#welcome-section h2 {
   font-weight: normal;
   font-size: 30px;
   color: var(--color-pink);
@@ -226,7 +226,7 @@ body {
   box-shadow: 15px 9px var(--color-darkest, 0.5);
 }
 
-#projects main p {
+#projects main .project-tile {
   font-size: 24px;
   padding: 10px;
 }
@@ -236,18 +236,31 @@ body {
   flex-direction: row;
   gap: 10px;
   place-content: center;
-  margin-top: 4vh;
+  vertical-align: middle;
+  margin-top: 30px;
   margin-bottom: 50px;
   padding: 10px 20px;
   background-color: var(--color-light-dark);
   border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.projects-aside i {
+.projects-aside:hover {
+  background-color: var(--color-light); 
+}
+
+.projects-aside a {
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.projects-aside a i {
   font-size: 24px;
+  margin-right: 5px;
 }
 
-.projects-aside h1 {
+.projects-aside a h1 {
   display: inline-flex;
   place-self: center;
 }
