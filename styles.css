@@ -77,7 +77,7 @@ body {
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 1000;
-  padding: 10px;
+  padding: 8px;
   border-radius: 8px;
 }
 
@@ -90,7 +90,8 @@ body {
 }
 
 .dropdown-container.open .dropdown {
-  display: block;
+  display: flex;
+  flex-direction: column;
   opacity: 1;
   visibility: visible;
 }
@@ -100,7 +101,8 @@ body {
 }
 
 .dropdown-container:hover .dropdown {
-  display: block;
+  display: flex;
+  flex-direction: column;
   opacity: 1;
   visibility: visible;
 }
@@ -111,7 +113,7 @@ body {
 
 .dropdown .nav-item {
   display: flex;
-  align-items: center;
+  place-content: center;
   padding: 7.5px 5px;
   border-bottom: 0.5px solid var(--color-darkest);
 }
