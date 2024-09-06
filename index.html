@@ -97,11 +97,7 @@
 
         icon.addEventListener("click", function (event) {
           event.stopPropagation();
-          if (container.classList.contains("open")) {
-            container.classList.remove("open");
-          } else {
-            container.classList.add("open");
-          }
+          container.classList.toggle("open");
         });
 
         document.addEventListener("click", function (event) {
@@ -110,19 +106,45 @@
           }
         });
 
-        const a = document.querySelector("aside a");
-        const i = document.querySelector("aside a i");
+        const asideLink = document.querySelector("aside a");
+        const asideIcon = asideLink.querySelector("i");
 
-        a.addEventListener("mouseenter", () => {
-          if (i.classList.contains("bxs-folder")) {
-            i.classList.replace("bxs-folder", "bxs-folder-open");
+        asideLink.addEventListener("mouseenter", () => {
+          if (asideIcon.classList.contains("bxs-folder")) {
+            asideIcon.classList.replace("bxs-folder", "bxs-folder-open");
           }
         });
 
-        a.addEventListener("mouseleave", () => {
-          if (i.classList.contains("bxs-folder-open")) {
-            i.classList.replace("bxs-folder-open", "bxs-folder");
+        asideLink.addEventListener("mouseleave", () => {
+          if (asideIcon.classList.contains("bxs-folder-open")) {
+            asideIcon.classList.replace("bxs-folder-open", "bxs-folder");
           }
+        });
+
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach((navLink) => {
+          const navIcon = navLink.querySelector("i");
+
+          navLink.addEventListener("mouseenter", () => {
+            if (navIcon.classList.contains("bx-home-alt-2")) {
+              navIcon.classList.replace("bx-home-alt-2", "bxs-home-alt-2");
+            } else if (navIcon.classList.contains("bx-briefcase")) {
+              navIcon.classList.replace("bx-briefcase", "bxs-briefcase");
+            } else if (navIcon.classList.contains("bx-envelope")) {
+              navIcon.classList.replace("bx-envelope", "bxs-envelope");
+            }
+          });
+
+          navLink.addEventListener("mouseleave", () => {
+            if (navIcon.classList.contains("bxs-home-alt-2")) {
+              navIcon.classList.replace("bxs-home-alt-2", "bx-home-alt-2");
+            } else if (navIcon.classList.contains("bxs-briefcase")) {
+              navIcon.classList.replace("bxs-briefcase", "bx-briefcase");
+            } else if (navIcon.classList.contains("bxs-envelope")) {
+              navIcon.classList.replace("bxs-envelope", "bx-envelope");
+            }
+          });
         });
       });
     </script>
@@ -190,7 +212,9 @@
                 src="https://i.ibb.co/k93dWR9/image.png"
                 alt="A weather app with almost everything"
               />
-              <p class="project-tile" aria-hidden="true">Advanced Weather App</p>
+              <p class="project-tile" aria-hidden="true">
+                Advanced Weather App
+              </p>
             </a>
             <a
               href="https://tyxiel.github.io/appViaCep2/"
@@ -201,7 +225,9 @@
                 src="https://i.ibb.co/s3sYKFz/image.png"
                 alt="A Brazilian CEP search app"
               />
-              <p class="project-tile" aria-hidden="true">Brazilian CEP Search</p>
+              <p class="project-tile" aria-hidden="true">
+                Brazilian CEP Search
+              </p>
             </a>
             <a
               href="https://tyxiel.github.io/CNPJSearchApp/"
@@ -212,7 +238,9 @@
                 src="https://i.ibb.co/BZKbf2F/image.png"
                 alt="A Brazilian CNPJ search app"
               />
-              <p class="project-tile" aria-hidden="true">Brazilian CNPJ Search</p>
+              <p class="project-tile" aria-hidden="true">
+                Brazilian CNPJ Search
+              </p>
             </a>
             <a
               href="https://tyxiel.github.io/Product-Landing-Page/"
@@ -223,7 +251,9 @@
                 src="https://i.ibb.co/2hS2brm/image.png"
                 alt="A simple product landing page"
               />
-              <p class="project-tile" aria-hidden="true">Product Landing Page</p>
+              <p class="project-tile" aria-hidden="true">
+                Product Landing Page
+              </p>
             </a>
             <a
               href="https://tyxiel.github.io/Technical-Doc/"
@@ -234,7 +264,9 @@
                 src="https://i.ibb.co/2YJPGNS/image.png"
                 alt="A simple golang technical document"
               />
-              <p class="project-tile" aria-hidden="true">Simple Golang Technical Doc</p>
+              <p class="project-tile" aria-hidden="true">
+                Simple Golang Technical Doc
+              </p>
             </a>
           </main>
           <aside class="projects-aside">
