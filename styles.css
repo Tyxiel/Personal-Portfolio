@@ -149,14 +149,9 @@ body {
 
 #welcome-section {
   color: var(--color-lightest);
-  background: linear-gradient(
-    135deg,
-    var(--color-darker),
-    var(--color-darkest),
-    var(--color-medium-dark)
-  );
+  background: linear-gradient(135deg, var(--color-darker), var(--color-darkest), var(--color-medium-dark));
   text-align: center;
-  padding: 0 50px 50px 50px;
+  padding: 0 50px 50px;
   height: 100vh;
   place-content: center;
 }
@@ -223,9 +218,8 @@ body {
 }
 
 #projects main > a:hover {
-  transform: translateY(-9px);
-  transform: translateX(-15px);
-  box-shadow: 15px 9px var(--color-darkest, 0.5);
+  transform: translateY(-9px) translateX(-15px);
+  box-shadow: 15px 9px rgba(var(--color-darkest), 0.5);
 }
 
 #projects main .project-tile {
@@ -247,7 +241,7 @@ body {
 }
 
 .projects-aside:hover {
-  background-color: var(--color-light); 
+  background-color: var(--color-light);
 }
 
 .projects-aside a {
