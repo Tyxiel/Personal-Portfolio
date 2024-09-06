@@ -149,7 +149,12 @@ body {
 
 #welcome-section {
   color: var(--color-lightest);
-  background: linear-gradient(135deg, var(--color-darker), var(--color-darkest), var(--color-medium-dark));
+  background: linear-gradient(
+    135deg,
+    var(--color-darker),
+    var(--color-darkest),
+    var(--color-medium-dark)
+  );
   text-align: center;
   padding: 0 50px 50px;
   height: 100vh;
@@ -219,7 +224,7 @@ body {
 
 #projects main > a:hover {
   transform: translateY(-9px) translateX(-15px);
-  box-shadow: 15px 9px rgba(var(--color-darkest), 0.5);
+  box-shadow: 15px 9px var(--color-darkest);
 }
 
 #projects main .project-tile {
@@ -262,4 +267,67 @@ body {
 .projects-aside a h1 {
   display: inline-flex;
   place-self: center;
+}
+
+#contact {
+  padding: 50px 20px;
+  background-color: var(--color-darker);
+  border-bottom: 20px solid var(--color-darkest);
+  color: var(--color-dark);
+  text-align: center;
+}
+
+#contact #contact-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: bolder;
+  color: var(--color-light-medium);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: var(--color-light-medium);
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--color-light-dark);
+}
+
+.contact-info .contact-details {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  gap: 25px;
+}
+
+.contact-info a {
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  background-color: var(--color-darkest);
+  color: var(--color-light-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: var(--color-light-medium);
+  background-color: var(--color-dark);
 }
