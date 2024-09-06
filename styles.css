@@ -309,14 +309,17 @@ body {
 .contact-info .contact-details {
   display: flex;
   flex-direction: row;
-  place-content: center;
-  gap: 25px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1%;
+  max-width: 40%;
+  margin: 0 auto;
 }
 
 .contact-info a {
-  width: 70px;
-  height: 70px;
-  font-size: 50px;
+  width: calc(70px - 0.25vw);
+  height: calc(70px - 0.5vh);
+  font-size: calc(50px - ((0.25vw + 0.5vh) / 2));
   background-color: var(--color-darkest);
   color: var(--color-light-dark);
   text-decoration: none;
