@@ -161,12 +161,12 @@ body {
   font-size: 60px;
 }
 
-#welcome-section h1 a {
+#welcome-section h1 #profile-link {
   color: var(--color-lightest);
   transition: color 0.3s ease;
 }
 
-#welcome-section h1 a:hover {
+#welcome-section h1 #profile-link:hover {
   color: var(--color-light-dark);
   transform: translateY(-2px);
 }
