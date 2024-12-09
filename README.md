@@ -4,8 +4,12 @@ Este é um projeto simples que serve para apresentar alguns dos projetos que eu 
 
 Acesse o GitHub Pages e veja como ficou!
 
+OBS: O JavaScript ficou embarcado no HTML pois esse foi um projeto feito para o [freeCodeCamp.org](https://www.freecodecamp.org/learn/2022/responsive-web-design/).
+
 # Welcome (EN)
 
 This is a simple project that serves to showcase some of the projects I've done.
 
 Go to GitHub Pages and see how it turned out!
+
+NOTE: JavaScript was embedded in HTML as this was a project made for [freeCodeCamp.org](https://www.freecodecamp.org/learn/2022/responsive-web-design/).
