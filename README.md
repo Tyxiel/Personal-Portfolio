@@ -1,6 +1,6 @@
 # tyxiel-personal-portfolio
 
-> 🌐 Personal portfolio showcasing projects and skills. Built for the [freeCodeCamp Responsive Web Design Certification](https://www.freecodecamp.org/certification/Tyxiel/responsive-web-design).
+> 🌐 Personal portfolio showcasing projects and skills. Built for the [freeCodeCamp Responsive Web Design Certification](https://www.freecodecamp.org/certification/tyxiel/responsive-web-design).
 
 [🇧🇷 Português](#-visão-geral-pt) | [🇺🇸 English](#-overview-en)
 
